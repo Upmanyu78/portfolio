@@ -31,7 +31,6 @@ nav {
 
 .logo span {
     font-weight: bold;
-    margin-left: 150px;
     font-size: 30px;
     font-family: 'segoe script';
     color: #000680;
@@ -63,7 +62,6 @@ nav {
     color: #ffffff;
     font-size: 20px;
     border-radius: 50px;
-    margin-right: 150px;
     text-decoration: none;
     font-weight:bold;
 }
@@ -73,7 +71,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 50px;
-    border-left: 100px;
+    
     align-items: center;
     background:#b8f5f2;
 }
@@ -81,7 +79,7 @@ nav {
 .hero-content {
     flex: 1 1 45%;
     margin-bottom: 20px;
-    margin-left: 150px;
+    
 }
 
 .hero-content h1 {
@@ -140,7 +138,7 @@ nav {
 
 .hero-content p {
     margin-bottom: 30px;
-    margin-right: 70px;
+    margin-right: 500px;
     color: #000000;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -185,8 +183,8 @@ nav {
 
 .social-links {
     position: absolute;
-    top: 60%;
-    left: 100px;
+    top: 55%;
+    left: 1400px;
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
@@ -220,8 +218,7 @@ nav {
 .intro-photo img {
     max-width: 300px;
     height: auto;
-    margin-right: 150px;
-    margin-left: 20px;
+    margin-right: 100px;
 }
 
 /* Media Queries for Responsive Design */
@@ -880,4 +877,16 @@ nav {
     }
 }
 
-  
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax values as needed */
+    gap: 20px;
+}
+
+/* ... other CSS ... */
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
