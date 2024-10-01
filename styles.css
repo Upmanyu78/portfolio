@@ -35,7 +35,7 @@ header nav {
     font-family: "segoe script";
 }
 
-.nav-links {
+/*.nav-links {
     list-style: none;
     display: flex;
 }
@@ -53,8 +53,78 @@ header nav {
 .nav-links a:hover {
     background-color: #555;
     border-radius: 5px;
+}*/
+
+/* Basic styling for navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Hide the menu items on smaller screens (mobile devices) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+/* Hide the menu items on smaller screens (mobile devices) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    /* Hide the nav items and show the hamburger icon */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust to your header height */
+        right: 0;
+        width: 100%;
+        background-color: #000000; /* Match your design */
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+}
+
+/* Style for the hamburger icon */
+.menu-toggle i {
+    font-size: 1.8rem;
+}
 .btn-contact {
     background-color: #f90;
     color: #fff;
@@ -81,6 +151,7 @@ header nav {
     max-width: 800px;
     margin: 0 auto;
 }
+
 
 .hero-content h1 {
     font-size: 3rem;
@@ -176,8 +247,10 @@ header nav {
 }
 
 .hero-image img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 15px;
+    height:auto
+
 }
 
 .social-links {
@@ -352,8 +425,7 @@ header nav {
     justify-content: space-between;
     align-items: flex-start;
     padding: 50px;
-    gap: 5px;
-    margin-left: 150px;
+    gap: 30px;
     overflow: hidden;
 }
 
@@ -361,7 +433,7 @@ header nav {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 30px;
     opacity: 0;
     transform: translateX(-100px); /* Start position for animation */
     transition: all 1.2s ease;
@@ -369,23 +441,25 @@ header nav {
 
 /* Styling for individual skill boxes */
 .skill-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 20px;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.skill-box h4{
-    font-family: 'segoe script';
-}
+
 
 /* Circle container */
 .circle-progress {
     width: 250px;
     height: 250px;
-    background: conic-gradient(#0066ff 0%, #0066ff calc(var(--percentage) * 1%), #ff0000 calc(var(--percentage) * 1%), #ff0000 100%);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -393,18 +467,47 @@ header nav {
     position: relative;
 }
 
+.circle-progress svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.circle-progress svg circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.circle-progress svg circle:first-child {
+  stroke: #9ab90095;
+}
+
+.circle-progress svg circle:last-child {
+  stroke: #000000; /* Progress circle */
+  stroke-dasharray: 408; /* Total length of the circle */
+  stroke-dashoffset: 408; /* Start at 0% */
+  transition: stroke-dashoffset 1s ease; /* Smooth transition */
+}
+
 /* Percentage text inside the circle */
 .circle-progress .percentage {
     position: absolute;
     font-size: 24px;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
-
+.skill-box h4{
+  font-family: 'segoe script';
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #000000;
+}
 /* Skill description */
 .skills-description {
     max-width: 600px;
-    margin-left: 0px;
     padding: 0;
     opacity: 0;
     transform: translateX(100px); /* Start position for animation */
@@ -705,59 +808,149 @@ header nav {
   .submit-btn:hover {
     background-color: #ffa000;
   }
+
+  /* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .hero-content {
+      flex: 1 1 60%;
+    }
+    .hero-image {
+      flex: 1 1 40%;
+    }
+  }
   
- /* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+  /* Mobile devices */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
     }
-
-    .social-box {
-        display: none;
+    .hero-image {
+      flex: 1 1 100%;
     }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: flex-start;
+    .hero-buttons {
+      flex-direction: column;
     }
-
-    .contact-form .form-row {
-        flex-direction: column;
+    .btn-hire, .btn-work {
+      margin: 10px 0;
     }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .services-container, .skills-grid, .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+  }
+  /* Small mobile devices */
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hero-content h1 {
+      font-size: 2rem;
     }
-
-    .hero p {
-        font-size: 1rem;
+    .hero-content p {
+      font-size: 1rem;
     }
-}
-
-/* Footer */
-.footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-    margin-top: 50px;
-}
+    .hero-buttons {
+      flex-direction: column;
+    }
+    .btn-hire, .btn-work {
+      margin: 10px 0;
+    }
+  }
+  
+  
+  
+  
+ /* Tablets and small laptops */
+@media (max-width: 1024px) {
+    /* Adjustments for tablets */
+  }
+  
+  /* Mobile devices */
+  @media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+  }
+  
+  /* Small mobile devices */
+  @media (max-width: 480px) {
+    /* Adjustments for small mobile devices */
+  }
+  
+  @media (max-width: 768px) {
+    header nav {
+      flex-direction: column;
+    }
+    header nav ul {
+      padding: 0;
+    }
+    header nav li {
+      margin: 10px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+    .hero-image {
+      flex: 1 1 100%;
+    }
+    .hero-buttons {
+      flex-direction: column;
+    }
+    .btn-hire, .btn-work {
+      margin: 10px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-container {
+      grid-template-columns: 1fr;
+    }
+    .service-box {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-section {
+      flex-direction: column;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    .skill-box {
+      margin-bottom: 20px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+    .portfolio-item {
+      margin-bottom: 20px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+    }
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      width: 100%;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .footer {
+      padding: 20px;
+    }
+    .footer-content {
+      flex-direction: column;
+    }
+    .footer-social {
+      margin-bottom: 20px;
+    }
+  }
+  
 
 .footer .footer-content {
     max-width: 1200px;
@@ -806,4 +999,85 @@ header nav {
 .footer .footer-copyright {
     font-size: 0.9em;
     margin-top: 20px;
+}
+
+/* Hire Me Page */
+.hire-me-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.hire-me-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hire-me-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.hire-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hire-form .form-row {
+    margin-bottom: 20px;
+}
+
+.hire-form input,
+.hire-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.hire-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.hire-form .submit-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hire-form .submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+}
+@media (max-width: 768px) {
+  .footer {
+      padding: 20px; /* Reduce padding on smaller screens */
+  }
+  .footer-content {
+      flex-direction: column; /* Stack elements vertically */
+  }
 }
