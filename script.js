@@ -138,4 +138,3 @@ const mobileMenu = document.getElementById('mobile-menu');
     
     // Call the function to start the animation
     animateProgress();
-      
