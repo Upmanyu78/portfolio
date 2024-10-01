@@ -100,3 +100,42 @@ filterItems.forEach(filter => {
     });
   });
 });
+const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Add click event listener to the hamburger icon
+    mobileMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+    // Function to animate progress circles
+    function animateProgress() {
+        const progressElements = document.querySelectorAll('.circle-progress');
+    
+        progressElements.forEach((element) => {
+            const percentage = parseFloat(getComputedStyle(element).getPropertyValue('--percentage'));
+            const percentageText = element.querySelector('.percentage');
+            const totalDashLength = 408; // This should be equal to the stroke-dasharray value
+            const targetDashOffset = totalDashLength - (totalDashLength * percentage) / 100;
+    
+            // Set initial state
+            element.querySelector('circle:last-child').style.strokeDashoffset = totalDashLength;
+            percentageText.textContent = `0%`;
+    
+            // Animate progress
+            let currentPercentage = 0;
+            const interval = setInterval(() => {
+                if (currentPercentage <= percentage) {
+                    // Update percentage text and stroke dash offset
+                    percentageText.textContent = `${currentPercentage}%`;
+                    element.querySelector('circle:last-child').style.strokeDashoffset = totalDashLength - (totalDashLength * currentPercentage) / 100;
+                    currentPercentage++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 20); // Adjust the interval timing for smoothness
+        });
+    }
+    
+    // Call the function to start the animation
+    animateProgress();
+      
