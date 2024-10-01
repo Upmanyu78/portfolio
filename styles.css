@@ -5,81 +5,80 @@
 }
 
 body {
-    font-family: 'Josefin Sans';
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
     color: #333;
-    background:#b8f5f2
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {
-    padding: 10px;
-    padding-top: 25px;
-    padding-bottom: 20;
-    position: sticky;
-    top: 0;
-    white-space: 60px;
-    z-index: 1000;
-    box-shadow: #333;
-    background:#9ce7cd
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
 }
 
-nav {
+header nav {
     display: flex;
-    position: sticky;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
-.logo span {
+.logo {
+    font-size: 1.5rem;
     font-weight: bold;
-    font-size: 30px;
-    font-family: 'segoe script';
-    color: #000680;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0 1rem;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: normal;
-    font-family: 'segoe script';
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
 }
 
-.nav-links a1 {
-    text-decoration: none;
-    color: #FF9800;
-    font-weight: bold;
-    font-family: 'segoe script';
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 .btn-contact {
-    padding: 15px 30px;
-    background: #000000;
-    color: #ffffff;
-    font-size: 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight:bold;
+    background-color: #f90;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #ff6600;
 }
 
 .hero {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px;
-    
+    padding: 4rem 2rem;
     align-items: center;
-    background:#b8f5f2;
+    background-color:#ffffff;
 }
 
 .hero-content {
     flex: 1 1 45%;
-    margin-bottom: 20px;
-    
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
@@ -138,6 +137,7 @@ nav {
 
 .hero-content p {
     margin-bottom: 30px;
+    margin-right: 00px;
     color: #000000;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -150,13 +150,12 @@ nav {
 }
 
 .btn-hire, .btn-work {
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-hire {
@@ -183,7 +182,7 @@ nav {
 .social-links {
     position: absolute;
     top: 55%;
-    left: 1400px;
+    left: 100px;
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
@@ -215,117 +214,19 @@ nav {
 }
 
 .intro-photo img {
-    max-width: 300px;
-    height: auto;
-    margin-right: 100px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    margin: 2rem 0;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 1200px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn-hire, .btn-work {
-        width: 100%;
-        text-align: center;
-    }
-
-    .badge {
-        font-size: 12px;
-        padding: 8px 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-content, .hero-image {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .social-links {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .badge {
-        font-size: 12px;
-    }
-
-    .award {
-        top: 10px;
-        left: 10px;
-    }
-
-    .customers {
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px 20px;
-    }
-
-    .hero {
-        padding: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn-hire, .btn-work {
-        padding: 10px 20px;
-    }
-
-    .badge {
-        padding: 5px 8px;
-        font-size: 10px;
-    }
-}
-
+/* Services section*/
 .services-section {
     text-align: center;
     padding: 50px 20px;
     margin-top: 100px;
     margin-bottom: 50px;
-    background-color: #cdfbfc;
+    background-color: #ffffff;
 }
 
 .services-section h2 {
@@ -356,19 +257,19 @@ nav {
     padding: 30px;
     text-align: left;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .service-box:hover {
-    transform: translateY(-20px);
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increases the shadow for a floating effect */
-    background-color: #9dd8b3; /* Optional: Change the background color on hover */
+    background-color: #bdddc8; /* Optional: Change the background color on hover */
+    transition: transform 0.3s ease;
 }
 
 .service-box img {
     max-width: 60px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
 }
 
 .service-box:hover img {
@@ -765,6 +666,7 @@ nav {
     border: 2px solid #e0e0e0;
     border-radius: 5px;
     margin-bottom: 20px;
+    height: 150px;
   }
   
   .submit-btn {
@@ -781,111 +683,46 @@ nav {
     background-color: #ffa000;
   }
   
-  @media (max-width: 768px) {
-    .contact-section {
-      flex-direction: column;
-    }
-  
-    .contact-info,
-    .contact-form {
-      width: 100%;
-    }
-  
-    .form-row {
-      flex-direction: column;
-    }
-  
-    .form-row input {
-      width: 100%;
-    }
-  }
-
-  /* For tablets and smaller desktops */
-@media (max-width: 1200px) {
-    .hero-content h1 {
+ /* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
         font-size: 2.5rem;
     }
-    .hero-buttons {
+
+    .social-box {
+        display: none;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-form .form-row {
         flex-direction: column;
     }
-    .btn-hire, .btn-work {
-        width: 100%;
-        text-align: center;
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .services-container, .skills-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-/* For smaller tablets and phones */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-content, .hero-image {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .hero-content h1 {
+@media (max-width: 480px) {
+    .hero h1 {
         font-size: 2rem;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .social-links {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* For very small devices like phones */
-@media (max-width: 480px) {
-    header {
-        padding: 10px 20px;
-    }
-
-    .hero {
-        padding: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-content p {
+    .hero p {
         font-size: 1rem;
-    }
-
-    .btn-hire, .btn-work {
-        padding: 10px 20px;
-    }
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax values as needed */
-    gap: 20px;
-}
-
-/* ... other CSS ... */
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
     }
 }
