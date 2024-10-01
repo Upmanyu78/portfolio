@@ -32,6 +32,7 @@ header nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: "segoe script";
 }
 
 .nav-links {
@@ -615,6 +616,28 @@ header nav {
     }
   }
   
+  .contact-me {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-me h2{
+    text-align: center;
+    color: #6c63ff;
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: 'segoe script';  /* Center the text */
+}
+
+.contact-me h3 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #000000;
+    font-family: 'Josefin Sans';
+    margin-top: 20px;    /* Adjust the spacing between the headings */
+}
+
   .contact-section {
     display: flex;
     justify-content: space-between;
@@ -725,4 +748,62 @@ header nav {
     .hero p {
         font-size: 1rem;
     }
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .footer-logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer .footer-social {
+    margin: 20px 0;
+}
+
+.footer .footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-social a:hover {
+    color: #3498db;
+}
+
+.footer .footer-links {
+    margin: 20px 0;
+}
+
+.footer .footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+    color: #3498db;
+}
+
+.footer .footer-copyright {
+    font-size: 0.9em;
+    margin-top: 20px;
 }
