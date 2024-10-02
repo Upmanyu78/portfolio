@@ -138,3 +138,20 @@ const mobileMenu = document.getElementById('mobile-menu');
     
     // Call the function to start the animation
     animateProgress();
+      
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    window.onscroll = function () {
+        const button = document.getElementById("backToTop");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+    
