@@ -719,6 +719,118 @@ nav ul {
     }
   }
   
+  /* Testimonials Section */
+.testimonials {
+  background-color: #f8f9fa; /* Light background */
+  padding: 50px 20px; /* Padding for top and bottom */
+  text-align: center; /* Center text */
+}
+
+.testimonials h2 {
+  font-size: 2.5rem; /* Larger font size for heading */
+  margin-bottom: 30px; /* Space below the heading */
+}
+
+.testimonial-container {
+  display: flex; /* Flexbox for responsive layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  gap: 20px; /* Space between items */
+}
+
+.testimonial-box {
+  background-color: #fff; /* White background for testimonial box */
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Limit max width */
+}
+
+.testimonial-box p {
+  font-size: 1.2rem; /* Font size for testimonial text */
+  margin-bottom: 15px; /* Space below testimonial text */
+}
+
+.testimonial-box h4 {
+  font-size: 1rem; /* Font size for client name */
+  color: #6c757d; /* Grey color for client name */
+}
+
+/* Blog Section */
+.blog {
+  background-color: #ffffff; /* White background */
+  padding: 50px 20px; /* Padding for top and bottom */
+  text-align: center; /* Center text */
+}
+
+.blog h2 {
+  font-size: 2.5rem; /* Larger font size for blog heading */
+  margin-bottom: 30px; /* Space below the heading */
+}
+
+.blog-container {
+  display: flex; /* Flexbox for responsive layout */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between blog boxes */
+}
+
+.blog-box {
+  background-color: #f8f9fa; /* Light background for blog box */
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  width: 100%; /* Full width */
+  max-width: 300px; /* Limit max width */
+  transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.blog-box:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.blog-box h4 {
+  font-size: 1.5rem; /* Font size for blog title */
+  margin-bottom: 10px; /* Space below blog title */
+}
+
+.blog-box p {
+  font-size: 1rem; /* Font size for blog description */
+  margin-bottom: 15px; /* Space below blog description */
+}
+
+.blog-box a {
+  text-decoration: none; /* Remove underline from links */
+  color: #007bff; /* Bootstrap primary color */
+  font-weight: bold; /* Bold font for "Read More" link */
+}
+
+.blog-box a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+@media (max-width: 768px) {
+  .testimonials h2, .blog h2 {
+      font-size: 2rem; /* Smaller heading font size */
+  }
+
+  .testimonial-box, .blog-box {
+      width: 90%; /* Adjust width for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-box, .blog-box {
+      width: 95%; /* Adjust width for smaller devices */
+  }
+
+  .blog-box h4 {
+      font-size: 1.2rem; /* Smaller font size for blog titles */
+  }
+}
+
   .contact-me {
     text-align: center;
     margin: 0 auto;
@@ -1081,3 +1193,27 @@ nav ul {
       flex-direction: column; /* Stack elements vertically */
   }
 }
+
+.back-to-top {
+  position: fixed; /* Fixed position */
+  bottom: 30px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  display: none; /* Initially hidden */
+  background-color: #000000; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make it circular */
+  padding: 15px; /* Increase padding for a bigger button */
+  font-size: 24px; /* Increase font size */
+  width: 60px; /* Fixed width for the button */
+  height: 60px; /* Fixed height for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.back-to-top:hover {
+  background-color: #4a4a4a; /* Darker shade on hover */
+}
+
