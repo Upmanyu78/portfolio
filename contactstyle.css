@@ -1,0 +1,209 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #e7d598; /* Soft gradient background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the contact form */
+.contact-container {
+    display: flex;
+    flex: 1;
+    height: 90vh; /* Adjusted to give some space at the top */
+    width: 90vw; /* Responsive width */
+    border-radius: 15px; /* Rounded corners for the entire container */
+    overflow: hidden; /* Ensures inner elements don't overflow */
+    margin-top: 50px;
+    box-shadow: 0 4px 30px rgba(222, 134, 134, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+/* Hover effect for the container */
+.contact-container:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+/* Left section for the contact form */
+.contact-left {
+    padding: 40px; /* Increased padding */
+    width: 50%; /* Set to 50% for responsive design */
+    background: #a4ff3c; /* Gradient background for form */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    position: relative; /* To allow for pseudo-elements */
+}
+
+/* Title and separator styles */
+.contact-left-title h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 2em; /* Larger font size for emphasis */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1); /* Soft text shadow */
+}
+
+.contact-left-title hr {
+    border: none;
+    height: 3px; /* Adjusted height for the line */
+    background: #0f160d; /* Soft pink color */
+    width: 15%;
+    /*margin: 10px auto 10px; /* Centered with space below */
+}
+
+/* Input fields styling */
+.contact-inputs {
+    width: 100%;
+    padding: 15px; /* Padding for input fields */
+    margin-top: 15px;
+    border-radius: 10px; /* Rounded edges */
+    border: 1px solid #000000;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    font-size: 1em; /* Consistent font size */
+}
+
+/* Input focus effect */
+.contact-inputs:focus {
+    border-color: #000000; /* Color change on focus to match gradient */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Soft glow effect */
+}
+
+/* Message box styling */
+.message-box {
+    width: 100%; /* Full width of the container */
+    height: 150px; /* Adjust height as needed */
+    padding: 15px; /* Padding for comfort */
+    border-radius: 10px; /* Rounded edges */
+    border: 1px solid #000000;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    font-size: 1em; /* Consistent font size */
+}
+
+/* Message box focus effect */
+.message-box:focus {
+    border-color: #b69e9e; /* Color change on focus */
+    box-shadow: 0 0 5px rgba(238, 0, 242, 0.5); /* Soft glow effect */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #60b500; /* Gradient button color */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Animation effects */
+}
+
+/* Button icon styles */
+
+
+/* Button hover effect */
+button:hover {
+    background: #88ff00; /* Hover gradient color */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Right section styling */
+.contact-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Padding for right section */
+    background: #ffffff; /* Light gray background */
+    width: 50%; /* Set to 50% for responsive design */
+    position: relative; /* To allow for pseudo-elements */
+    overflow: hidden; /* Ensure image doesn’t overflow */
+}
+
+/* Responsive image styling */
+.contact-right img {
+    max-width: 100%; /* Responsive image size */
+    transition: transform 0.3s ease; /* Animation for image */
+}
+
+/* Additional styles for smooth animations */
+.contact-inputs,
+button,
+.message-box {
+    border: 2px solid transparent; /* Initial border */
+}
+
+.contact-inputs:focus,
+button:hover,
+.message-box:focus {
+    border-color: #000000; /* Highlight effect */
+}
+
+/* Footer Styles */
+.footer {
+    background: #f0db95; /* Soft gradient background */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+    margin-top: 50px; 
+    position: relative; /* Positioning context */
+    width: 100%; /* Full width */
+    bottom: 0; /* Stick to the bottom */
+}
+
+/* Footer copyright text */
+.footer-copyright p {
+    margin: 0; /* Remove default margin */
+    font-size: 1em; /* Font size */
+    opacity: 0.8; /* Slightly transparent for subtlety */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        height: auto; /* Allow height to adjust */
+        width: 95vw; /* Slightly smaller width */
+        margin-top: 20px; /* Less margin at the top */
+    }
+
+    .contact-left, .contact-right {
+        width: 100%; /* Full width for each section */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .contact-left-title h2 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+
+    .contact-left-title hr {
+        width: 80%; /* Adjusted width for smaller screens */
+    }
+
+    .contact-inputs, .message-box {
+        font-size: 0.9em; /* Smaller font size for inputs */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text */
+    }
+
+    .footer {
+        padding: 10px 0; /* Reduced padding for footer */
+    }
+
+    .footer-copyright p {
+        font-size: 0.9em; /* Smaller footer text */
+    }
+}
