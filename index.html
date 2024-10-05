@@ -39,7 +39,7 @@
               </h1>
               <p>I'm A Web Developer currently persuing BTech in CSE from MMDU Mullana and in expertise of creating website with fully responsive Also with its UI UX part too.</p>
             <div class="hero-buttons">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhD_l4PF5_BQOCjbIoMn1mfMj1Rq3-xZ6stL2rySuiOsB58g/viewform?usp=sf_link" class="btn-hire"">Hire Me</a>
+                <a href="contact.html" class="btn-hire"">Hire Me</a>
                 <a href="#portfolio" class="btn-work">See My Work</a>
             </div>
         </div>
@@ -133,8 +133,17 @@
         </div>
     </div>
     </section>
-
+    
+    <div class="skills-description">
+      <h3>My Skills</h3>
+      <h2>Beautiful & Unique Digital Experiences</h2>
+      <p>Our services are designed to meet modern-day requirements with stunning visual design and smooth functionality.</p>
+      <a href="MyResume.pdf" download>
+      <button class="download-cv-btn">Download CV</button>
+  </a>
+  </div>
     <div id="about" class="skills-section">
+      
         <div class="skills-grid">
             <!-- Row 1 -->
             <div class="skill-box">
@@ -182,15 +191,8 @@
                 <h4>Web Development</h4>
             </div>
         </div>
-    
-        <div class="skills-description">
-            <h3>My Skills</h3>
-            <h2>Beautiful & Unique Digital Experiences</h2>
-            <p>Our services are designed to meet modern-day requirements with stunning visual design and smooth functionality.</p>
-            <a href="Aditya MMU.pdf" download>
-            <button class="download-cv-btn">Download CV</button>
-        </a>
-        </div>
+        
+        
     </div>
 
     <section id="portfolio" class="portfolio">
@@ -301,20 +303,18 @@
               </div>
             </div>
           
-            <div class="contact-form">
-              <form action="#" method="post">
-                <div class="form-row">
-                  <input type="text" name="name" placeholder="Name" required>
-                  <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-row">
-                  <input type="text" name="phone" placeholder="Phone" required>
-                  <input type="text" name="subject" placeholder="Subject" required>
-                </div>
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" class="submit-btn">Submit</button>
+            <div class="contact-container">
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                  <div class="contact-left-title">
+                 </div>
+                  <input type="hidden" name="access_key" value="64c54080-f9ab-4697-b091-0f07f6bc2e42">
+                  <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                  <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                  <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                  <button type="submit">Submit<img src="323697.png" alt=""></button>
               </form>
-            </div>
+            
+          </div>
           </div>
           
     </section>
@@ -333,7 +333,7 @@
               <a href="#">Home</a>
               <a href="#">About</a>
               <a href="#">Portfolio</a>
-              <a href="#">Contact</a>
+              <a href="contact.html">Contact</a>
           </div>
           <div class="footer-copyright">
               <p>&copy; 2024 Aditya Upmanyu. All Rights Reserved.</p>
