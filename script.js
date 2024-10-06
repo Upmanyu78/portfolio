@@ -154,4 +154,21 @@ const mobileMenu = document.getElementById('mobile-menu');
             button.style.display = "none";
         }
     };
-    
+    // Open Sidebar
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.add('active');
+});
+  
+// Close Sidebar
+document.getElementById('close-menu').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.remove('active');
+});
+
+// Automatically close sidebar when a menu option is clicked
+const menuLinks = document.querySelectorAll('.sidebar ul li a'); // Select all menu links
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        document.getElementById('sidebar').classList.remove('active'); // Close the sidebar
+    });
+});
