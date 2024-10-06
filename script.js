@@ -139,21 +139,19 @@ const mobileMenu = document.getElementById('mobile-menu');
     // Call the function to start the animation
     animateProgress();
       
-    // Open Sidebar
-document.getElementById('mobile-menu').addEventListener('click', function() {
+    // Open Sidebar when clicking the hamburger icon
+  document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('sidebar').classList.add('active');
-});
-  
-// Close Sidebar
-document.getElementById('close-menu').addEventListener('click', function() {
+  });
+
+  // Close Sidebar when clicking the close icon
+  document.getElementById('close-menu').addEventListener('click', function() {
     document.getElementById('sidebar').classList.remove('active');
-});
+  });
 
-// Automatically close sidebar when a menu option is clicked
-const menuLinks = document.querySelectorAll('.sidebar ul li a'); // Select all menu links
-
-menuLinks.forEach(link => {
+  // Close Sidebar when a link in the sidebar is clicked
+  document.querySelectorAll('.sidebar ul li a').forEach(link => {
     link.addEventListener('click', function() {
-        document.getElementById('sidebar').classList.remove('active'); // Close the sidebar
+      document.getElementById('sidebar').classList.remove('active');
     });
-});
+  });
