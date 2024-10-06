@@ -273,22 +273,51 @@ body.no-scroll {
       margin: 0.5rem 0;           /* Add margin between buttons */
   }
   
+  .hero {
+    flex-direction: column;   /* Stack content vertically on mobile */
+    padding: 2rem 1rem;       /* Reduce padding for smaller screens */
+}
+.hero-content {
+  text-align: center;       /* Center-align text for mobile */
+  margin-bottom: 2rem;      /* Add spacing between content and image */
+}
+
+.hero-content h1 {
+  font-size: 2rem;          /* Reduce font size of heading */
+}
+
+.hero-content h1 span {
+  font-size: 2.5rem;        /* Adjust font size of animated name */
+}
+
+.hero-content p {
+  font-size: 1rem;          /* Ensure readable font size for text */
+  padding: 0 1rem;          /* Add padding around text for better readability */
+}
+
   .hero-buttons {
       flex-direction: column;     /* Stack buttons vertically */
       align-items: center;        /* Center-align the buttons */
-      gap: 15px;                  /* Add gap between the buttons */
+                        /* Add gap between the buttons */
   }
+  .btn-hire, .btn-work {
+    width: 100%;              /* Full-width buttons on mobile */
+    margin-bottom: 10px;      /* Add space between buttons */
+    font-size: 1rem;
 }
+
+
 .hero-image {
-    flex: 1 1 45%;
-    position: relative;
+  flex: 1 1 100%;           /* Full width for image on mobile */
+  margin-top: 1.5rem;
 }
 
 .hero-image img {
-    max-width: 100%;
-    border-radius: 15px;
-    height:auto
-
+  max-width: 80%;           /* Scale down image size on mobile */
+  height: auto;
+  margin: 0 auto;           /* Center the image */
+  display: block;
+}
 }
 
 .social-links {
@@ -1297,3 +1326,13 @@ button:hover {
 .back-to-top:hover {
   background-color: #4a4a4a; /* Darker shade on hover */
 }
+@media (max-width: 480px) {
+  .back-to-top {
+      bottom: 15px; /* Adjust bottom distance */
+      right: 15px; /* Adjust right distance */
+      width: 45px; /* Smaller button for very small screens */
+      height: 45px; /* Smaller button for very small screens */
+      font-size: 18px; /* Smaller font size */
+  }
+}
+
