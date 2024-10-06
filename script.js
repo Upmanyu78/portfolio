@@ -154,6 +154,13 @@ const mobileMenu = document.getElementById('mobile-menu');
             button.style.display = "none";
         }
     };
+    // Smooth scroll to top when button is clicked
+document.getElementById("backToTop").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Smooth scrolling
+    });
+});
     // Open Sidebar
 document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('sidebar').classList.add('active');
