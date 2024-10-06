@@ -139,28 +139,6 @@ const mobileMenu = document.getElementById('mobile-menu');
     // Call the function to start the animation
     animateProgress();
       
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-    
-    window.onscroll = function () {
-        const button = document.getElementById("backToTop");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            button.style.display = "block";
-        } else {
-            button.style.display = "none";
-        }
-    };
-    // Smooth scroll to top when button is clicked
-document.getElementById("backToTop").addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Smooth scrolling
-    });
-});
     // Open Sidebar
 document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('sidebar').classList.add('active');
