@@ -1304,35 +1304,3 @@ button:hover {
   }
 }
 
-.back-to-top {
-  position: fixed; /* Fixed position */
-  bottom: 30px; /* Distance from the bottom */
-  right: 30px; /* Distance from the right */
-  display: none; /* Initially hidden */
-  background-color: #000000; /* Button background color */
-  color: white; /* Button text color */
-  border: none; /* Remove border */
-  border-radius: 50%; /* Make it circular */
-  padding: 15px; /* Increase padding for a bigger button */
-  font-size: 24px; /* Increase font size */
-  width: 60px; /* Fixed width for the button */
-  height: 60px; /* Fixed height for the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  z-index: 1000; /* Ensure it appears above other elements */
-  transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-.back-to-top:hover {
-  background-color: #4a4a4a; /* Darker shade on hover */
-}
-@media (max-width: 480px) {
-  .back-to-top {
-      bottom: 15px; /* Adjust bottom distance */
-      right: 15px; /* Adjust right distance */
-      width: 45px; /* Smaller button for very small screens */
-      height: 45px; /* Smaller button for very small screens */
-      font-size: 18px; /* Smaller font size */
-  }
-}
-
