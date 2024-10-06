@@ -7,7 +7,7 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #ffffff;
+  background-color: #e7d598;
   color: #333;
 }
 
@@ -17,16 +17,18 @@ a {
 }
 
 header {
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   padding: 1rem 0;
 }
 
-header nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;    
   padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -35,71 +37,39 @@ header nav {
   font-family: "segoe script";
 }
 
-/* Basic styling for navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-/* Hide the menu items on smaller screens (mobile devices) */
 .menu-toggle {
   display: none;
   cursor: pointer;
-}
-
-nav ul {
-  list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-/* Responsive styling for mobile */
-@media (max-width: 768px) {
-  /* Hide the nav items and show the hamburger icon */
-  nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px; /* Adjust to your header height */
-      right: 0;
-      width: 100%;
-      background-color: #000000; /* Match your design */
-      text-align: center;
-  }
-
-  nav ul.active {
-      display: flex; /* Show menu when active */
-  }
-
-  nav ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #ccc;
-  }
-
-  .menu-toggle {
-      display: block; /* Show the hamburger icon */
-  }
-}
-
-/* Style for the hamburger icon */
-.menu-toggle i {
   font-size: 1.8rem;
-}
-.btn-contact {
-  background-color: #f90;
   color: #fff;
+}
+
+/* Show hamburger icon on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;            /* Display hamburger icon on smaller screens */
+  }
+
+  /* Optional: Hide other nav items on smaller screens */
+  nav ul {
+    display: none;             /* Hide nav items on mobile */
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  padding: 10px 15px;
+}
+
+.btn-contact {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   transition: background-color 0.3s ease;
@@ -108,6 +78,80 @@ nav ul {
 .btn-contact:hover {
   background-color: #ff6600;
 }
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #000000;
+  color: #fff;
+  transition: left 0.3s ease;
+  z-index: 1000;  /* Ensures sidebar is above other elements */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.close-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Prevent body from scrolling when sidebar is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .btn-contact {
+    display: none;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;  /* Full width on smaller screens */
+  }
+}
+
 
 .hero {
     display: flex;
@@ -220,11 +264,19 @@ nav ul {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Responsive Adjustments */
+/* Mobile optimizations */
 @media (max-width: 768px) {
   .btn-hire, .btn-work {
-      padding: 0.5rem 1rem; /* Smaller padding for mobile */
-      font-size: 0.9em; /* Smaller font size for mobile */
+      width: 100%;               /* Make buttons full width on mobile */
+      padding: 0.6rem 1rem;       /* Adjust padding for smaller screens */
+      font-size: 0.9rem;          /* Slightly reduce font size for mobile */
+      margin: 0.5rem 0;           /* Add margin between buttons */
+  }
+  
+  .hero-buttons {
+      flex-direction: column;     /* Stack buttons vertically */
+      align-items: center;        /* Center-align the buttons */
+      gap: 15px;                  /* Add gap between the buttons */
   }
 }
 .hero-image {
@@ -302,7 +354,7 @@ nav ul {
     padding: 50px 20px;
     margin-top: 10px;
     margin-bottom: 50px;
-    background-color: #ffffff;
+    background-color: #e7d598;
 }
 
 .services-section h2 {
@@ -340,7 +392,7 @@ nav ul {
 .service-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increases the shadow for a floating effect */
-    background-color: #bdddc8; /* Optional: Change the background color on hover */
+    background-color: #c2c981; /* Optional: Change the background color on hover */
     transition: transform 0.3s ease;
 }
 
@@ -509,7 +561,7 @@ nav ul {
 }
 /* Skill description */
 .skills-description {
-  max-width: 1000px; /* Maximum width */
+  max-width: 700px; /* Maximum width */
   width: 100%; /* Use a percentage width for responsiveness */
   padding: 20px; /* Add some padding */
   margin: 0 auto; /* Center horizontally */
@@ -520,6 +572,8 @@ nav ul {
   opacity: 0; /* Start as invisible */
   transform: translateX(100px); /* Start position for animation */
   transition: all 1.2s ease; /* Animation effects */
+  background: #c2c981;
+  border-radius: 25px;
 }
 
 /* When the elements are in view, add these classes via JavaScript */
@@ -632,10 +686,10 @@ nav ul {
 .portfolio {
   text-align: center;
   padding: 30px 10px; /* Reduced padding for mobile */
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 30px;
   justify-items: center;
-  background-color: #ffffff;
+  background-color: #c2c981;
 }
 
 .portfolio h2 {
@@ -744,10 +798,9 @@ nav ul {
   font-size: 0.9rem; /* Adjust font size for overlay */
 }
 
-  
   /* Testimonials Section */
 .testimonials {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #c2c981; /* Light background */
   padding: 50px 20px; /* Padding for top and bottom */
   text-align: center; /* Center text */
 }
@@ -765,8 +818,8 @@ nav ul {
 }
 
 .testimonial-box {
-  background-color: #fff; /* White background for testimonial box */
-  border: 1px solid #dee2e6; /* Light border */
+  background-color: #ddff00; /* White background for testimonial box */
+  border: 2px solid #000000; /* Light border */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Inner padding */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
@@ -786,7 +839,7 @@ nav ul {
 
 /* Blog Section */
 .blog {
-  background-color: #ffffff; /* White background */
+  background-color: #c2c981; /* White background */
   padding: 50px 20px; /* Padding for top and bottom */
   text-align: center; /* Center text */
 }
@@ -859,14 +912,21 @@ nav ul {
 
   .contact-me {
     text-align: center;
-    margin: 0 auto;
+    max-width: 1500px;
+    padding: 50px 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     width: 100%;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    background: #e7d598;
 }
 
 .contact-me h2{
     text-align: center;
     color: #001efe;
-    font-size: 2em;
+    font-size: 30px;
     margin-bottom: 10px;
     font-family: 'segoe script';  /* Center the text */
 }
@@ -884,7 +944,7 @@ nav ul {
     justify-content: space-between;
     align-items: flex-start;
     padding: 50px;
-    background-color: #f9f9f9;
+    background-color: #e7d598;
   }
   
   .contact-info {
@@ -1144,8 +1204,8 @@ button:hover {
   
 
 .footer .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1500px;
+    margin: 0 ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1192,65 +1252,7 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Hire Me Page */
-.hire-me-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #f7f7f7;
-}
 
-.hire-me-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.hire-me-section p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-.hire-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.hire-form .form-row {
-    margin-bottom: 20px;
-}
-
-.hire-form input,
-.hire-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-}
-
-.hire-form textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.hire-form .submit-btn {
-    background-color: #3498db;
-    color: #fff;
-    padding: 12px 30px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hire-form .submit-btn:hover {
-    background-color: #2980b9;
-}
 
 /* Footer */
 .footer {
