@@ -16,17 +16,19 @@ a {
   color: inherit;
 }
 
+/* Header Styles */
 header {
   background-color: #000000;
   color: #fff;
   padding: 1rem 0;
+  position: relative; /* Ensure positioning for the sidebar */
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;    
+  width: 100%;
   padding: 0 2rem;
   box-sizing: border-box;
 }
@@ -37,6 +39,7 @@ nav {
   font-family: "segoe script";
 }
 
+/* Hamburger Menu Toggle */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -44,18 +47,59 @@ nav {
   color: #fff;
 }
 
-/* Show hamburger icon on mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;            /* Display hamburger icon on smaller screens */
-  }
-
-  /* Optional: Hide other nav items on smaller screens */
-  nav ul {
-    display: none;             /* Hide nav items on mobile */
-  }
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #000000;
+  color: #fff;
+  transition: left 0.3s ease; /* Smooth slide-in effect */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
 }
 
+.sidebar.active {
+  left: 0; /* Slide in the sidebar when active */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.close-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Disable body scrolling when sidebar is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Navbar Links */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -79,78 +123,30 @@ nav {
   background-color: #ff6600;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 250px;
-  height: 100%;
-  background-color: #000000;
-  color: #fff;
-  transition: left 0.3s ease;
-  z-index: 1000;  /* Ensures sidebar is above other elements */
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 1rem;
-}
-
-.sidebar ul li {
-  margin: 1rem 0;
-}
-
-.sidebar ul li a {
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.close-menu {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Prevent body from scrolling when sidebar is open */
-body.no-scroll {
-  overflow: hidden;
-}
-
-/* Responsive for mobile */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
   .menu-toggle {
-    display: block;
+    display: block; /* Show the hamburger icon on mobile */
   }
 
-  .btn-contact {
+  /* Hide the top nav links and contact button on mobile */
+  .nav-links, .btn-contact {
     display: none;
   }
-}
 
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
   .sidebar {
-    width: 100%;  /* Full width on smaller screens */
+    width: 250px; /* Sidebar width for mobile */
+  }
+
+  .sidebar ul li {
+    margin: 1.5rem 0; /* Increase spacing for better readability on mobile */
+  }
+
+  .sidebar ul li a {
+    font-size: 1.5rem; /* Larger font size for mobile links */
   }
 }
+
 
 
 .hero {
@@ -1303,4 +1299,3 @@ button:hover {
       flex-direction: column; /* Stack elements vertically */
   }
 }
-
