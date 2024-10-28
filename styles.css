@@ -19,9 +19,11 @@ a {
 /* Header Styles */
 header {
   background-color: #000000;
+  position: sticky;
+  top: 0;
   color: #fff;
   padding: 1rem 0;
-  position: relative; /* Ensure positioning for the sidebar */
+  z-index: 1000;
 }
 
 nav {
@@ -129,6 +131,7 @@ body.no-scroll {
     display: block; /* Show the hamburger icon on mobile */
   }
 
+  
   /* Hide the top nav links and contact button on mobile */
   .nav-links, .btn-contact {
     display: none;
@@ -162,6 +165,7 @@ body.no-scroll {
     flex: 1 1 45%;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 
@@ -256,8 +260,14 @@ body.no-scroll {
 }
 
 /* Button hover effects */
-.btn-hire:hover, .btn-work:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+.btn-hire:hover {
+  background: none;
+    color: #000000;
+    border: 2px solid #000000;
+}
+.btn-work:hover {
+  background: #000000;
+    color: #fff;
 }
 
 /* Mobile optimizations */
@@ -935,154 +945,133 @@ body.no-scroll {
   }
 }
 
-  .contact-me {
-    text-align: center;
-    max-width: 1500px;
-    padding: 50px 20px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    border-radius: 25px;
-    background: #e7d598;
+.contact-me {
+  text-align: center;
+  max-width: 1500px; /* Adjusted for better centering */
+  padding: 50px 20px;
+  margin: 20px auto; /* Centered horizontally */
+  width: 90%; /* Responsive width */
+  border-radius: 25px;
+  background: #e7d598;
 }
 
-.contact-me h2{
-    text-align: center;
-    color: #001efe;
-    font-size: 30px;
-    margin-bottom: 10px;
-    font-family: 'segoe script';  /* Center the text */
+.contact-me h2 {
+  color: #001efe;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'segoe script';
 }
 
 .contact-me h3 {
-    font-size: 3em;
-    margin-bottom: 40px;
-    color: #000000;
-    font-family: 'Josefin Sans';
-    margin-top: 20px;    /* Adjust the spacing between the headings */
+  font-size: 3em;
+  margin-bottom: 40px;
+  color: #000000;
+  font-family: 'Josefin Sans';
+  margin-top: 20px;
 }
 
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #e7d598;
+}
+
+.contact-info, .contact-form {
+  width: 100%;
+  max-width: 600px; /* Set a max-width for larger screens */
+  padding: 20px;
+  margin: 20px 0; /* Space between sections */
+  
+}
+
+.contact-info {
+  background: #fcfcfc;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.info-item {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.info-item i {
+  margin-right: 10px;
+  color: #000000;
+  font-size: 1.4em;
+}
+
+@media (min-width: 992px) {
   .contact-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 50px;
-    background-color: #e7d598;
-  }
-  
-  .contact-info {
-    width: 40%;
-    padding: 20px;
-    background:  #fcfcfc;
-    border-radius: 20px;
-    border: 2px solid #000000;
-    color: #000000;
-  }
-  
-  .info-item {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-  }
-  
-  .info-item i {
-    margin-right: 10px;
-    color: #000000;
-    font-size: 1.4em;
-  }
-  
-  /* Make Contact Info Full Width on Mobile */
-@media (max-width: 768px) {
-  .contact-section {
-      flex-direction: column; /* Stack vertically */
-      padding: 20px; /* Reduced padding */
+      flex-direction: row; /* Side-by-side on larger screens */
+      justify-content: space-between;
+      align-items: flex-start;
   }
 
-  .contact-info {
-      width: 100%; /* Full width */
-      margin-bottom: 20px; /* Space between sections */
-  }
-
-  .contact-form {
-      width: 100%; /* Full width */
-  }
-
-  .form-row {
-      width: 100%; /* Full width */
-      gap: 20px; /* Reduced gap */
+  .contact-info, .contact-form {
+      width: 45%; /* Set width for side-by-side layout */
   }
 }
-  .contact-form {
-    width: 55%;
-    padding: 20px;
+@media (min-width: 992px) {
+  .contact-info {
+      margin-right: 20px; /* Adds space to the right of .contact-info */
   }
-  
+}
 
-  
-  .form-row input {
-    width: 48%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align items */
-    width: 100%; /* Full width of the container */
-    padding: 20px; /* Padding around the form */
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-    border-radius: 15px; /* Rounded corners */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
 }
 
 .form-row {
-    width: 50%; /* Full width */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 150px; /* Space between items */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap */
 }
 
-/* Input and Textarea Styling */
 .contact-inputs {
   width: 100%;
-  padding: 15px; /* Padding for input fields */
+  padding: 15px;
   margin-top: 15px;
-  border-radius: 10px; /* Rounded edges */
+  border-radius: 10px;
   border: 1px solid #000000;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-  font-size: 1em; /* Consistent font size */
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Input focus effect */
 .contact-inputs:focus {
-    border-color: #000000; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Soft glow effect */
+  border-color: #000000;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Button Styling */
 button {
-    width: 50%; /* Full width of the container */
-    padding: 15px; /* Padding for comfort */
-    background:  #000000; /* Gradient background */
-    color: white; /* Text color */
-    font-weight: bold; /* Bold text */
-    border:#000000 3px;
-    border-radius: 10px; /* Rounded button */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1.1em; /* Slightly larger font size */
-    transition: background 0.3s ease, transform 0.2s ease; /* Animation effects */
+  width: 100%;
+  max-width: 300px; /* Limited width for larger screens */
+  padding: 15px;
+  background: #000000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Button hover effect */
 button:hover {
-    background:  #ffffff; /* Darker gradient on hover */
-    color: #000000;
-    border: 2px solid #000000;
-    transform: scale(1.05); /* Slight scaling effect */
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  transform: scale(1.05);
 }
+
 
 
   /* Tablets and small laptops */
@@ -1229,11 +1218,12 @@ button:hover {
   
 
 .footer .footer-content {
-    max-width: 1500px;
-    margin: 0 ;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0px;
 }
 
 .footer .footer-logo {
@@ -1283,7 +1273,7 @@ button:hover {
 .footer {
     background-color: #000000;
     color: #fff;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     margin-top: 50px;
 }
