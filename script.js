@@ -139,16 +139,16 @@ const mobileMenu = document.getElementById('mobile-menu');
     // Call the function to start the animation
     animateProgress();
       
-    let touchStartX = 0;
+let touchStartX = 0;
 let touchEndX = 0;
 
 // Function to handle swipe actions
 function handleSwipe() {
-  const sidebar = document.getElementById('sidebar');
+  //const sidebar = document.getElementById('sidebar');
   // Detect swipe right to open (only if sidebar is closed)
-  if (touchEndX > touchStartX && !sidebar.classList.contains('active')) {
-    sidebar.classList.add('active');
-  }
+  //if (touchEndX > touchStartX && !sidebar.classList.contains('active')) {
+   // sidebar.classList.add('active');
+ // }
   // Detect swipe left to close (only if sidebar is open)
   if (touchEndX < touchStartX && sidebar.classList.contains('active')) {
     sidebar.classList.remove('active');
