@@ -139,6 +139,32 @@ const mobileMenu = document.getElementById('mobile-menu');
     // Call the function to start the animation
     animateProgress();
       
+    let touchStartX = 0;
+let touchEndX = 0;
+
+// Function to handle swipe actions
+function handleSwipe() {
+  const sidebar = document.getElementById('sidebar');
+  // Detect swipe right to open (only if sidebar is closed)
+  if (touchEndX > touchStartX && !sidebar.classList.contains('active')) {
+    sidebar.classList.add('active');
+  }
+  // Detect swipe left to close (only if sidebar is open)
+  if (touchEndX < touchStartX && sidebar.classList.contains('active')) {
+    sidebar.classList.remove('active');
+  }
+}
+
+// Listen for touch start
+document.addEventListener('touchstart', function(e) {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+// Listen for touch end
+document.addEventListener('touchend', function(e) {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
     // Open Sidebar when clicking the hamburger icon
   document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('sidebar').classList.add('active');
@@ -155,3 +181,4 @@ const mobileMenu = document.getElementById('mobile-menu');
       document.getElementById('sidebar').classList.remove('active');
     });
   });
+  
