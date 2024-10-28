@@ -19,11 +19,16 @@ a {
 /* Header Styles */
 header {
   background-color: #000000;
-  position: sticky;
   top: 0;
   color: #fff;
   padding: 1rem 0;
   z-index: 1000;
+}
+@media (min-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+  }
 }
 
 nav {
@@ -130,7 +135,6 @@ body.no-scroll {
   .menu-toggle {
     display: block; /* Show the hamburger icon on mobile */
   }
-
   
   /* Hide the top nav links and contact button on mobile */
   .nav-links, .btn-contact {
