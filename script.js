@@ -10,6 +10,43 @@ readMoreButtons.forEach(button => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.querySelector(".hero-content p");
+  const words = ["UX Designer", "Web Developer", "Freelancer"]; // Add words to type
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+      const currentWord = words[wordIndex];
+      if (isDeleting) {
+          textElement.textContent = currentWord.substring(0, charIndex - 1);
+          charIndex--;
+      } else {
+          textElement.textContent = currentWord.substring(0, charIndex + 1);
+          charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 100 : 200; // Typing & deleting speed
+
+      if (!isDeleting && charIndex === currentWord.length) {
+          typeSpeed = 2000; // Pause before deleting
+          isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length; // Move to next word
+          typeSpeed = 500;
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+  }
+
+  typeEffect();
+});
+
+
+
+
 // Get all the modals and close buttons
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
@@ -154,6 +191,11 @@ function handleSwipe() {
     sidebar.classList.remove('active');
   }
 }
+
+function openLink(url) {
+  window.open(url, "_blank");
+}
+
 
 // Listen for touch start
 document.addEventListener('touchstart', function(e) {
