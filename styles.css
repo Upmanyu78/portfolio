@@ -7,7 +7,7 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #e7d598;
+  background-color: #ffffff;
   color: #333;
 }
 
@@ -18,10 +18,18 @@ a {
 
 /* Header Styles */
 header {
-  background-color: #000000;
-  top: 0;
+  background-color: #d3d3ef;
+  margin: auto;
+  max-width: 80%;
+  margin-top: 20px; 
+  display: flex;
+  align-items: center;
   color: #fff;
   padding: 1rem 0;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  justify-content: center
+  position relative;
   z-index: 1000;
 }
 @media (min-width: 768px) {
@@ -43,7 +51,9 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #000000;
   font-family: "segoe script";
+  white-space: nowrap;
 }
 
 /* Hamburger Menu Toggle */
@@ -51,9 +61,16 @@ nav {
   display: none;
   cursor: pointer;
   font-size: 1.8rem;
-  color: #fff;
+  color: #000000;
 }
 
+/* Mobile View - Show Hamburger Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    white-space: nowrap;
+  }
+}
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
@@ -114,7 +131,7 @@ body.no-scroll {
 }
 
 .nav-links li a {
-  color: #ffffff;
+  color: #000000;
   padding: 10px 15px;
 }
 
@@ -123,6 +140,7 @@ body.no-scroll {
   color: #000000;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
+  border: 2px solid #000000;
   transition: background-color 0.3s ease;
 }
 
@@ -133,7 +151,8 @@ body.no-scroll {
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Show the hamburger icon on mobile */
+    display: flex; /* Show the hamburger icon on mobile */
+    margin-right: 25px;
   }
   
   /* Hide the top nav links and contact button on mobile */
@@ -156,6 +175,7 @@ body.no-scroll {
 
 
 
+
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -169,7 +189,7 @@ body.no-scroll {
     flex: 1 1 45%;
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 
 
@@ -183,72 +203,62 @@ body.no-scroll {
 }
 
 .hero-content h1 span {
-    color: #7B5FFF;
+    color: #1a1629;
     position: relative;
     font-size: 80px;
     font-family: 'Josefin Sans';
     font-weight: 700;
     font-display: swap;
 }
-  
-.animate-name {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeIn 5s ease-out;
-    animation-iteration-count: infinite;
-  }
-  
-  .animate-name:nth-child(3) { animation-delay: 1s; }
-  .animate-name:nth-child(4) { animation-delay: 1s; }
- 
-  
-  @keyframes fadeIn {
-    0%, 20% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    40%, 60% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    80%, 100% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  }
-  
-.hero-content h1 span::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 5px;
-    
-}
 
 .hero-content p {
-    margin-bottom: 30px;
-    margin-right: 00px;
-    color: #000000;
-    font-size: 1.1rem;
+    margin-bottom: 20px;
+    /* margin-right: 00px; */
+    color: #cf0000;
+    font-size: 3rem;
+    font-style: inherit;
+    font-family: 'Segoe Script';
+    font-display: swap;
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    display: inline-block;
     line-height: 1.6;
 }
 
+/* Cursor Blinking Animation */
+.hero-content p::after {
+  content: '|';
+  position: relative;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Cursor Blinking Effect */
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
 .hero-buttons {
-    display: flex;
+    display: inline;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center; /* Center buttons */
+    margin-top: 20px; /* Space from heading */
 }
 
 .btn-hire, .btn-work {
-    display: inline-block;
+    display:inline;
     margin: 0.5rem;
     padding: 0.75rem 1.5rem;
     color: #fff;
     border-radius: 25px;
     transition: background-color 0.3s ease;
-    text-align: center;
+    text-align: left;
     flex: 0.5px;
 }
 
@@ -330,43 +340,66 @@ body.no-scroll {
 }
 }
 
-.social-links {
-    position: absolute;
-    top: 55%;
-    left: 100px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-    gap: 15px;
-    transform: translateY(-50%);
+/* Social Links Wrapper - Center Between Hero & Service */
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff; /* Light background to separate sections */
 }
 
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+/* Social Icons */
 .social-links a {
-    display: block;
-    margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .social-links img {
-    width: 40px;
-    height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
-/* Responsive Adjustments for Mobile */
+/* Hover Effect */
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
-  .social-links {
-      position: static; /* Change to static positioning */
-      top: auto; /* Reset top */
-      left: auto; /* Reset left */
-      flex-direction: row; /* Change to horizontal layout */
-      justify-content: center; /* Center links horizontally */
-      gap: 10px; /* Adjust gap between links */
-      margin-top: 20px; /* Add margin above for spacing */
-      align-items: center; /* Center items vertically */
-      text-align: center; /* Center text if needed */
-      width:max-content;
+  .social-section {
+      padding: 20px 0; /* Reduce padding on mobile */
   }
 
+  .social-links {
+      flex-wrap: wrap;
+      gap: 15px; /* Reduce space between icons */
+  }
+
+  .social-links a {
+      width: 45px;
+      height: 45px;
+  }
+
+  .social-links img {
+      width: 50px;
+      height: 50px;
+  }
 }
+
+
 .intro-section {
     display: flex;
     justify-content: space-between;
@@ -874,6 +907,83 @@ body.no-scroll {
 .testimonial-box h4 {
   font-size: 1rem; /* Font size for client name */
   color: #6c757d; /* Grey color for client name */
+}
+
+
+/* Section Title */
+.section-title {
+  font-size: 28px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+.buttons button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #ddd;
+}
+
+/* Icons */
+.icons {
+  margin-top: 10px;
+}
+
+.icons a {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #ff6600;
+}
+/* Coming Soon Card */
+.coming-soon {
+  background: rgba(255, 255, 255, 0.1);
+  font-style: italic;
+  color: rgb(255, 89, 0);
+  pointer-events: none;
 }
 
 /* Blog Section */
