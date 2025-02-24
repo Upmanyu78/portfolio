@@ -8,17 +8,9 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BEJLHCP798"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-BEJLHCP798');
-</script>
 </head>
-    
+
 <body>
     <header>
         <nav>
@@ -60,30 +52,40 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hello, I Am <br>
-                <span class="animate-name">Aditya</span>
-                <span class="animate-name">Upmanyu</span>
+            <h1>Hello, I am <br>
+                <span class="animate-name">Aditya Upmanyu</span>
+                <!-- <span class="animate-name">Upmanyu</span> -->
               </h1>
-              <p>I'm A Web Developer currently persuing BTech in CSE from MMDU Mullana and in expertise of creating website with fully responsive Also with its UI UX part too.</p>
+              <div><p></p>
+              </div>
             <div class="hero-buttons">
                 <a href="contact.html" class="btn-hire"">Hire Me</a>
                 <a href="#portfolio" class="btn-work">See My Work</a>
             </div>
+            <!-- <div class="social-box">
+              <div class="social-links">
+                  <a href="https://www.behance.net/adityaupmanyu78"><img src="behance.png" alt="Behance"></a>
+                  <a href="https://dribbble.com/sabortooth69"><img src="dribble.png" alt="Dribbble"></a>
+                  <a href="https://www.linkedin.com/in/aditya-upmanyu-0806b926b/"><img src="linkedin.png" alt="LinkedIn"></a>
+                  <a href="https://www.instagram.com/adityaa.ux/"><img src="instagram.png" alt="Instagram"></a>
+              </div>
+          </div> -->
         </div>
 
-        <div class="social-box">
-            <div class="social-links">
-                <a href="https://www.behance.net/adityaupmanyu78"><img src="behance.png" alt="Behance"></a>
-                <a href="https://dribbble.com/sabortooth69"><img src="dribble.png" alt="Dribbble"></a>
-                <a href="https://www.linkedin.com/in/aditya-upmanyu-0806b926b/"><img src="linkedin.png" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/adityaa.ux/"><img src="instagram.png" alt="Instagram"></a>
-            </div>
-        </div>
+        
         <div class="intro-photo">
             <img src="Photoleap_10_11_2024_00_23_04_c1QdU.png" alt="Aditya Upmanyu">
         </div>
     </section>
-
+   <!-- Social Links Section (Between Hero & Services) -->
+<section class="social-section">
+    <div class="social-links">
+        <a href="https://www.behance.net/adityaupmanyu78"><img src="behance.png" alt="Behance"></a>
+        <a href="https://dribbble.com/sabortooth69"><img src="dribble.png" alt="Dribbble"></a>
+        <a href="https://www.linkedin.com/in/aditya-upmanyu-0806b926b/"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/adityaa.ux/"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+</section>
     <section id="services" class="services-section">
         <h2>My Expertise</h2>
         <h3>Provide Wide Range of Digital Services</h3>
@@ -221,7 +223,43 @@
     <section id="portfolio" class="portfolio">
         <h2>creative works</h2>
         <h3>Check my portfolio</h3>
-    <div class="portfolio-section">
+        <h2 class="title">My Projects</h2>
+
+        <div class="projects-container">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+              <h3>IMS</h3>
+              <p>A modern web based Information Multicast System.</p>
+              <div class="buttons">
+                  <button onclick="openLink('https://example.com/design1')">See Design</button>
+                  <!-- <button onclick="openLink('https://upmanyu78.github.io/MMUIMS/')">Visit Website</button> -->
+              </div>
+              <div class="icons">
+                  <a href="https://github.com/upmanyu78/MMUIMS" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://upmanyu78.github.io/MMUIMS/" target="_blank"><i class="fas fa-globe"></i></a>
+              </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+              <h3>IMS App</h3>
+              <p>An Android Application for Information Multicast System.</p>
+              <div class="buttons">
+                  <button onclick="openLink('https://example.com/design2')">See Design</button>
+              </div>
+              <div class="icons">
+                  <a href="https://github.com/upmanyu78" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="#" target="_blank"><i class="fab fa-google-play"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- More Projects Coming Soon -->
+      <div class="project-card coming-soon">
+        <h3>More Projects</h3>
+        <p>Coming Soon...</p>
+    </div>
+</div>
+    <!-- <div class="portfolio-section">
         <div class="portfolio-filter">
           <ul>
             <li class="active" data-filter="*">All</li>
@@ -233,43 +271,53 @@
         </div>
       
         <div class="portfolio-grid">
-          <div class="portfolio-item products">
-            <img src="image1.png" alt="Product Design">
-            <div class="portfolio-overlay">
-              <h3>Application UI Design</h3>
+            <a href="showcase.html" target="_blank">
+                <div class="portfolio-item products">
+                  <img src="image1.png" alt="Product Design">
+                  <div class="portfolio-overlay">
+                    <h3>Application UI Design</h3>
+                  </div>
+                </div>
+              </a>
               
-            </div>
-          </div>
+              <a href="showcase.html" target="_blank">
+                <div class="portfolio-item web-app">
+                  <img src="image2.png" alt="Web App Design">
+                  <div class="portfolio-overlay">
+                    <h3>Web Designs</h3>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="showcase.html" target="_blank">
+                <div class="portfolio-item interaction">
+                  <img src="image3.png" alt="Interaction Design">
+                  <div class="portfolio-overlay">
+                    <h3>UI Interaction</h3>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="showcase.html" target="_blank">
+                <div class="portfolio-item brand-identity">
+                  <img src="image4.png" alt="Brand Identity">
+                  <div class="portfolio-overlay">
+                    <h3>Brand Identity Design</h3>
+                  </div>
+                </div>
+              </a>
       
-          <div class="portfolio-item web-app">
-            <img src="image2.png" alt="Web App Design">
-            <div class="portfolio-overlay">
-              <h3>Web Designs</h3>
+          <a href="showcase.html" target="_blank">
+            <div class="portfolio-item products">
+              <img src="image5.png" alt="Product Design">
+              <div class="portfolio-overlay">
+                <h3>Product Showcase</h3>
+              </div>
             </div>
-          </div>
-      
-          <div class="portfolio-item interaction">
-            <img src="image3.png" alt="Interaction Design">
-            <div class="portfolio-overlay">
-              <h3>UI Interaction</h3>
-            </div>
-          </div>
-      
-          <div class="portfolio-item brand-identity">
-            <img src="image4.png" alt="Brand Identity">
-            <div class="portfolio-overlay">
-              <h3>Brand Identity Design</h3>
-            </div>
-          </div>
-      
-          <div class="portfolio-item products">
-            <img src="image5.png" alt="Product Design">
-            <div class="portfolio-overlay">
-              <h3>Product Showcase</h3>
-            </div>
-          </div>
+          </a>
+          
         </div>
-      </div>
+      </div> -->
     </section>
     <section id="testimonials" class="testimonials">
       <h2>What Clients Say</h2>
@@ -342,7 +390,7 @@
               <span>My Portfolio</span>
           </div>
           <div class="footer-social">
-              <a href="https://www.behance.net/adityaupmanyu"><i class="fab fa-behance"></i></a>
+              <a href="https://www.behance.net/adityaupmanyu78"><i class="fab fa-behance"></i></a>
               <a href="https://dribbble.com/sabortooth69"><i class="fab fa-dribbble"></i></a>
               <a href="https://www.linkedin.com/in/aditya-upmanyu-0806b926b/"><i class="fab fa-linkedin"></i></a>
               <a href="https://www.instagram.com/adityaa.ux/"><i class="fab fa-instagram"></i></a>
@@ -359,7 +407,6 @@
       </div>
   </footer>
     <script src="script.js"></script>
-    
 </body>
 
 </html>
