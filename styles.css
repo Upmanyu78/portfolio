@@ -18,15 +18,15 @@ a {
 
 /* Header Styles */
 header {
-  background-color: #005e488f;
-  backdrop-filter: blur(50px); /* Blur effect */
-    -webkit-backdrop-filter: blur(100px); /* Safari support */
+  /* background-color: #06614caa; */
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   margin: auto;
   max-width: 80%;
   margin-top: 20px; 
   display: flex;
   align-items: center;
-  color: #bc5454;
+  color: #fff;
   padding: 1rem 0;
   border: 2px solid #000000;
   border-radius: 50px;
@@ -38,7 +38,7 @@ header {
 @media (min-width: 768px) {
   header {
     position: sticky;
-    top: 0;
+    top: 10px;
   }
 }
 
@@ -128,9 +128,9 @@ body.no-scroll {
 
 /* Navbar Links */
 .nav-links {
-  display:flex;
-  gap: px;
-  list-style:none;
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
 .nav-links li a {
@@ -175,9 +175,6 @@ body.no-scroll {
     font-size: 1.5rem; /* Larger font size for mobile links */
   }
 }
-
-
-
 
 .hero {
     display: flex;
