@@ -19,26 +19,23 @@ a {
 /* Header Styles */
 header {
   /* background-color: #06614caa; */
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(255, 255, 255);
   margin: auto;
   max-width: 80%;
-  margin-top: 20px; 
   display: flex;
   align-items: center;
   color: #fff;
   padding: 1rem 0;
-  border: 2px solid #000000;
-  border-radius: 50px;
-  box-shadow: 0px 8px 15px rgba(4, 74, 75, 0.473);
-  justify-content: center
-  position relative;
+  border-bottom: 0.1cap solid #00000052;
+  justify-content: center;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 @media (min-width: 768px) {
-  header {
+  .header {
     position: sticky;
-    top: 10px;
+    top: 0px;
   }
 }
 
@@ -52,7 +49,7 @@ nav {
 }
 
 .logo {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #000000;
   font-family: "segoe script";
@@ -64,14 +61,21 @@ nav {
   display: none;
   cursor: pointer;
   font-size: 1.8rem;
+  font-weight: bold;
   color: #000000;
+  position: absolute;
+  /* top: 20px; */
+  left: 25px;
 }
 
 /* Mobile View - Show Hamburger Menu */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
-    white-space: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+    padding: 1rem;
   }
 }
 /* Sidebar Styles */
@@ -155,7 +159,7 @@ body.no-scroll {
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex; /* Show the hamburger icon on mobile */
-    margin-right: 15px;
+    margin-left: -40px;
   }
   
   /* Hide the top nav links and contact button on mobile */
@@ -311,7 +315,7 @@ body.no-scroll {
 }
 
 .hero-content p {
-  font-size: 1rem;          /* Ensure readable font size for text */
+  font-size: 5rem;          /* Ensure readable font size for text */
   padding: 0 1rem;          /* Add padding around text for better readability */
 }
 
@@ -1066,7 +1070,7 @@ body.no-scroll {
   margin: 20px auto; /* Centered horizontally */
   width: 90%; /* Responsive width */
   border-radius: 25px;
-  background: #e7d598;
+  background: #94770576;
 }
 
 .contact-me h2 {
