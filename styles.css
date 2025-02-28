@@ -76,6 +76,7 @@ nav {
     justify-content: space-between;
     align-items: left;
     padding: 1rem;
+    top: 0;
   }
 }
 /* Sidebar Styles */
@@ -160,6 +161,7 @@ body.no-scroll {
   .menu-toggle {
     display: flex; /* Show the hamburger icon on mobile */
     margin-left: -40px;
+    top: 0;
   }
   
   /* Hide the top nav links and contact button on mobile */
