@@ -52,7 +52,7 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #000000;
   font-family: "segoe script";
@@ -155,7 +155,7 @@ body.no-scroll {
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex; /* Show the hamburger icon on mobile */
-    margin-right: 25px;
+    margin-right: 15px;
   }
   
   /* Hide the top nav links and contact button on mobile */
