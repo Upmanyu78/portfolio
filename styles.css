@@ -735,13 +735,13 @@ body.no-scroll {
 }
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .skills-grid {
+  .skill-grid {
       grid-template-columns: repeat(4, 1fr); /* 4 boxes per row for tablets */
   }
 }
 
 @media (max-width: 480px) {
-  .skills-grid {
+  .skill-grid {
       grid-template-columns: repeat(2, 1fr) !important; /* 2 boxes per row on mobile */
   }
 }
