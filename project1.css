@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
+.header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8ffd7;
+  padding: 10px 10px;
+}
+
+/* Logo Styling */
+.logo {
+  height: 50px; /* Adjust as needed */
+  font-size: 30px;
+  font-family: 'segoe script';
+  padding-left: 100px;
+  /* margin-left: 100px; */
+}
+
+/* Back Button Styling */
+.back-btn {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Back Button Icon */
+.back-btn::before {
+  /* content: "←"; Unicode arrow */
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Hover Effect */
+.back-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .back-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+}
+
+
+/* 🌍 Responsive for Tablets (Max: 1024px) */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 10px 3%;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* 📱 Responsive for Mobile (Max: 768px) */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 2%;
+  }
+
+  .logo {
+    font-size: 24px;
+    height: auto;
+    padding-left: 10px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+}
+
+/* Hero Section Styling */
+.hero {
+  text-align: center;
+  padding: 100px 10px;
+}
+
+/* Heading Styling */
+.hero h1 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+
+/* Image Styling */
+.hero-box img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {  /* For tablets */
+  .hero {
+      padding: 60px 5%;
+  }
+
+  .hero h1 {
+      font-size: 38px;
+      margin-bottom: 30px;
+  }
+
+  .hero-box img {
+      max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 768px) {  /* For mobile devices */
+  .hero {
+      padding: 50px 5%;
+  }
+
+  .hero h1 {
+      font-size: 32px;
+      margin-bottom: 25px;
+  }
+
+  .hero-box img {
+      max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {  /* For smaller mobile devices */
+  .hero {
+      padding: 40px 5%;
+  }
+
+  .hero h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
+
+  .hero-box img {
+      max-width: 95%;
+  }
+}
+
+/* Project Details Section */
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+/* Left Side Text */
+.project-text {
+  width: 50%;
+}
+
+.project-text h2 {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'poppins';
+  /* line-height: 1.3; */
+}
+
+/* Right Side Scope */
+.project-scope {
+  width: 40%;
+  /* background: white; */
+  /* padding: 20px; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+/* List Styling */
+.project-scope ul {
+  list-style:disc;
+  padding: 0;
+  color: rgb(6, 5, 5)
+}
+
+.project-scope li {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: rgba(61, 61, 61, 0.796)
+}
+
+/* 🌍 Responsive for Tablets (Max: 1024px) */
+@media screen and (max-width: 1024px) {
+  .project-details {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .project-text, .project-scope {
+      width: 80%;
+  }
+}
+
+/* 📱 Responsive for Mobile (Max: 768px) */
+@media screen and (max-width: 768px) {
+  .project-details {
+      padding: 30px 5%;
+  }
+  
+  .project-text, .project-scope {
+      width: 100%;
+  }
+  
+  .project-text h2 {
+      font-size: 24px;
+  }
+  
+  .project-scope {
+      padding: 15px;
+  }
+  
+  .project-scope li {
+      font-size: 14px;
+  }
+}
+
+/* Project Overview Section */
+.project-overview {
+  text-align: left;
+  padding: 40px 100px;
+}
+
+/* Heading */
+.project-overview h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Flexbox Layout for Three Sections */
+.overview-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  text-align: left;
+  color: rgb(61, 61, 61)
+
+}
+
+/* Objectives, Client Kickoff & Notes Styling */
+.objectives, .client-kickoff, .notes {
+  width: 33%;
+}
+
+/* Section Titles */
+.objectives h3, .client-kickoff h3, .notes h3 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  color: rgb(3, 2, 2)
+
+}
+
+/* Bullet Points Styling */
+.objectives ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: rgba(26, 23, 23, 0.853)
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .project-overview h2 {
+    font-size: 45px;
+    align-items: center;
+    font-weight: bold;
+  }
+  .overview-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .objectives, .client-kickoff, .notes {
+      width: 100%;
+  }
+}
+
+/* Methodology Section */
+.methodology {
+  text-align: left;
+  padding: 40px 10%;
+}
+
+/* Heading */
+.methodology h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.methodology-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+/* Text and List */
+.methodology-text {
+  width: 50%;
+}
+
+.methodology-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 25px;
+  color: #000000b0;
+}
+
+/* Image Styling */
+.methodology-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.methodology-image img {
+  max-width: 100%;
+  height: auto;
+  background-color: #c1c7fd; /* Adjust background color if needed */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+  .methodology-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .methodology-text, .methodology-image {
+      width: 100%;
+  }
+}
+
+/* Prototype Section */
+.prototype-section {
+  text-align: left;
+  padding: 40px 100px;
+}
+
+/* Heading Styling */
+.prototype-section h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Prototype Link */
+.prototype-section a {
+  font-size: 25px;
+  color: #0073e6b3;
+  text-decoration: underline;
+}
+
+.prototype-section a:hover {
+  color: #005bb5;
+}
+
+.footer .footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.footer .footer-logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .footer-social {
+  margin: 20px 0;
+}
+
+.footer .footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-social a:hover {
+  color: #3498db;
+}
+
+.footer .footer-links {
+  margin: 20px 0;
+}
+
+.footer .footer-links a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+  color: #3498db;
+}
+
+.footer .footer-copyright {
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+.footer {
+    padding: 20px; /* Reduce padding on smaller screens */
+}
+.footer-content {
+    flex-direction: column; /* Stack elements vertically */
+}
+}
