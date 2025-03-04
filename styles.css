@@ -552,142 +552,6 @@ body.no-scroll {
 
 
 
-/* Container for the skills section */
-.skills-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    overflow: hidden;
-}
-
-/* Grid for skill boxes */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-    opacity: 0;
-    transform: translateX(-100px); /* Start position for animation */
-    transition: all 1.2s ease;
-}
-
-/* Styling for individual skill boxes */
-.skill-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background: #ffffff;
-  border-radius: 20px;
-  color: #000000;
-  border: 2px solid #000000;
-  padding: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-
-
-/* Circle container */
-.circle-progress {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.circle-progress svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  transform: rotate(-90deg);
-}
-
-.circle-progress svg circle {
-  fill: none;
-  stroke-width: 10;
-  stroke-linecap: round;
-}
-
-.circle-progress svg circle:first-child {
-  stroke: #9ab90095;
-}
-
-.circle-progress svg circle:last-child {
-  stroke: #000000; /* Progress circle */
-  stroke-dasharray: 408; /* Total length of the circle */
-  stroke-dashoffset: 408; /* Start at 0% */
-  transition: stroke-dashoffset 1s ease; /* Smooth transition */
-}
-
-/* Percentage text inside the circle */
-.circle-progress .percentage {
-    position: absolute;
-    font-size: 24px;
-    color: #000000;
-    font-weight: bold;
-}
-.skill-box h4{
-  font-family: 'segoe script';
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 15px;
-  color: #000000;
-}
-/* Skill description */
-.skills-description {
-  max-width: 700px; /* Maximum width */
-  width: 100%; /* Use a percentage width for responsiveness */
-  padding: 20px; /* Add some padding */
-  margin: 0 auto; /* Center horizontally */
-  display: flex; /* Enable flexbox for alignment */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  opacity: 0; /* Start as invisible */
-  transform: translateX(100px); /* Start position for animation */
-  transition: all 1.2s ease; /* Animation effects */
-  background: #c2c981;
-  border-radius: 25px;
-}
-
-/* When the elements are in view, add these classes via JavaScript */
-.show-grid {
-  transform: translateX(0); /* Move to normal position */
-  opacity: 1; /* Fully visible */
-}
-
-.show-description {
-  transform: translateX(0); /* Move to normal position */
-  opacity: 1; /* Fully visible */
-}
-
-/* Animation for sliding in from the left */
-@keyframes slideInLeft {
-  0% {
-      transform: translateX(-100px);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-/* Animation for sliding in from the right */
-@keyframes slideInRight {
-  0% {
-      transform: translateX(100px);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
 .skill-section {
     text-align: center;
     padding: 40px;
@@ -745,46 +609,31 @@ body.no-scroll {
       grid-template-columns: repeat(2, 1fr) !important; /* 2 boxes per row on mobile */
   }
 }
-.skills-description h3 {
-  font-size: 30px; /* Font size for subheading */
-  font-weight: bold;
-  color: #001efe;
-  font-family: 'Segoe Script'; /* Ensure the correct font family */
-  margin: 10px 0; /* Adjust top and bottom margins */
+.cv-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #f4f4f4;
 }
 
-.skills-description h2 {
-  font-size: 50px; /* Font size for main heading */
-  font-weight: bold;
-  margin: 10px 0; /* Adjust top and bottom margins */
-}
-
-.skills-description p {
-  font-size: 16px; /* Font size for paragraph */
-  margin: 10px 0 20px 0; /* Add some spacing */
-}
-
-/* Download CV button styling */
 .download-cv-btn {
-  background-color: #000000; /* Button background color */
-  color: white; /* Button text color */
-  max-width: 500px; /* Maximum width */
-  width: 100%; /* Full width for responsiveness */
-  padding: 15px 20px; /* Padding for button */
-  border-radius: 25px; /* Rounded corners */
-  border: none; /* Remove border */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effect for color and scaling */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-/* Button hover effect */
-.download-cv-btn:hover {
-  background-color: #ffffff; /* Background color on hover */
-  color: #000000; /* Text color on hover */
-  border: 2px solid #000000; /* Border on hover */
-  transform: scale(1.05); /* Slight scaling effect on hover */
+  background-color: #000000;
+  color: white;
+  max-width: 300px;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 /* Responsive Adjustments */
