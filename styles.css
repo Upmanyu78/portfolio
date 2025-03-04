@@ -688,7 +688,51 @@ body.no-scroll {
       opacity: 1;
   }
 }
+.skill-section {
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: linear-gradient(135deg, #ffffff, #fddde6); /* Gradient background */
+    overflow: hidden; /* Ensures shapes stay within */
+}
 
+.skill-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Skill Box */
+.skill-box {
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    min-width: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-box:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
 .skills-description h3 {
   font-size: 30px; /* Font size for subheading */
   font-weight: bold;
