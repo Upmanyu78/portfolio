@@ -592,6 +592,17 @@ body.no-scroll {
     transition: all 0.3s ease-in-out;
 }
 
+.skill-box img {
+  width: 60px; /* Adjust image size */
+  height: 60px; /* Maintain uniformity */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.skill-box p {
+  font-size: 0.8rem; /* Adjust text size */
+  font-weight: bold;
+  margin: 0;
+}
 /* Hover Effect */
 .skill-box:hover {
     transform: scale(1.05);
